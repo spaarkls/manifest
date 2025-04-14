@@ -1,0 +1,55 @@
+\hypertarget{handler__path_8c}{}\doxysection{handler\+\_\+path.\+c File Reference}
+\label{handler__path_8c}\index{handler\_path.c@{handler\_path.c}}
+{\ttfamily \#include \char`\"{}handler\+\_\+path.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}file\+\_\+list.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$dirent.\+h$>$}\newline
+{\ttfamily \#include $<$openssl/evp.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+Include dependency graph for handler\+\_\+path.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{handler__path_8c_a35736c687f2f7b69c7c4153e5ce9c960}{get\+\_\+hash}} (const char $\ast$filename, char $\ast$filehash)
+\begin{DoxyCompactList}\small\item\em Функция генерации хеш-\/суммы sha-\/2256. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{handler__path_8c_a5226f53bff0b648478b5ec72e0573250}{recursive\+\_\+find}} (char $\ast$dirname, char $\ast$except, \mbox{\hyperlink{structfile__list__t}{file\+\_\+list\+\_\+t}} $\ast$list, int offset)
+\begin{DoxyCompactList}\small\item\em Функция для составления пути к файлам \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{handler__path_8c_a35736c687f2f7b69c7c4153e5ce9c960}\label{handler__path_8c_a35736c687f2f7b69c7c4153e5ce9c960}} 
+\index{handler\_path.c@{handler\_path.c}!get\_hash@{get\_hash}}
+\index{get\_hash@{get\_hash}!handler\_path.c@{handler\_path.c}}
+\doxysubsubsection{\texorpdfstring{get\_hash()}{get\_hash()}}
+{\footnotesize\ttfamily void get\+\_\+hash (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{char $\ast$}]{filehash }\end{DoxyParamCaption})}
+
+
+
+Функция генерации хеш-\/суммы sha-\/2256. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Путь к файлу \\
+\hline
+{\em filehash} & Куда записываем хеш-\/сумму \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{handler__path_8c_a5226f53bff0b648478b5ec72e0573250}\label{handler__path_8c_a5226f53bff0b648478b5ec72e0573250}} 
+\index{handler\_path.c@{handler\_path.c}!recursive\_find@{recursive\_find}}
+\index{recursive\_find@{recursive\_find}!handler\_path.c@{handler\_path.c}}
+\doxysubsubsection{\texorpdfstring{recursive\_find()}{recursive\_find()}}
+{\footnotesize\ttfamily void recursive\+\_\+find (\begin{DoxyParamCaption}\item[{char $\ast$}]{dirname,  }\item[{char $\ast$}]{except,  }\item[{\mbox{\hyperlink{structfile__list__t}{file\+\_\+list\+\_\+t}} $\ast$}]{list,  }\item[{int}]{offset }\end{DoxyParamCaption})}
+
+
+
+Функция для составления пути к файлам 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dirname} & Путь где будет поиск \\
+\hline
+{\em list} & Структура для сохранения путей \\
+\hline
+\end{DoxyParams}

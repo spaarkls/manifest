@@ -1,0 +1,48 @@
+\hypertarget{opendir_8h}{}\doxysection{opendir.\+h File Reference}
+\label{opendir_8h}\index{opendir.h@{opendir.h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structfile__list__t}{file\+\_\+list\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Структура для хранения списка файлов. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{opendir_8h_abdef764a97d3367832c6fbfec41b4b63}{MAX\+\_\+\+LEN\+\_\+\+PATH}}~1024
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{opendir_8h_aa764d265ff3bce6ce19ae0833003af45}{recursive\+\_\+find}} (char $\ast$dirname, \mbox{\hyperlink{structfile__list__t}{file\+\_\+list\+\_\+t}} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Рекурсивно обходит директорию и сохраняет пути к файлам. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{opendir_8h_abdef764a97d3367832c6fbfec41b4b63}\label{opendir_8h_abdef764a97d3367832c6fbfec41b4b63}} 
+\index{opendir.h@{opendir.h}!MAX\_LEN\_PATH@{MAX\_LEN\_PATH}}
+\index{MAX\_LEN\_PATH@{MAX\_LEN\_PATH}!opendir.h@{opendir.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_LEN\_PATH}{MAX\_LEN\_PATH}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+LEN\+\_\+\+PATH~1024}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{opendir_8h_aa764d265ff3bce6ce19ae0833003af45}\label{opendir_8h_aa764d265ff3bce6ce19ae0833003af45}} 
+\index{opendir.h@{opendir.h}!recursive\_find@{recursive\_find}}
+\index{recursive\_find@{recursive\_find}!opendir.h@{opendir.h}}
+\doxysubsubsection{\texorpdfstring{recursive\_find()}{recursive\_find()}}
+{\footnotesize\ttfamily void recursive\+\_\+find (\begin{DoxyParamCaption}\item[{char $\ast$}]{dirname,  }\item[{\mbox{\hyperlink{structfile__list__t}{file\+\_\+list\+\_\+t}} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Рекурсивно обходит директорию и сохраняет пути к файлам. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dirname} & Путь к начальной директории. \\
+\hline
+{\em list} & Указатель на структуру, в которую сохраняются найденные файлы. \\
+\hline
+\end{DoxyParams}

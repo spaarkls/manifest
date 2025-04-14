@@ -1,0 +1,89 @@
+\hypertarget{parse_8h}{}\doxysection{parse.\+h File Reference}
+\label{parse_8h}\index{parse.h@{parse.h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structflags__t}{flags\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Структура для хранения ключей \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{parse_8h_a7102518953a8dc14a99f1f714fe4b0e4}{MAX\+\_\+\+LEN\+\_\+\+CMD}}~100
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{parse_8h_a60cdbd54c1a2b3bf449a28b8ddc1e701}{parse\+\_\+args}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structflags__t}{flags\+\_\+t}} $\ast$flags)
+\begin{DoxyCompactList}\small\item\em Функция парсинга аргументов из командной строки \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{parse_8h_acac2d49b00a0ce18fd30367afc287bcc}{parse\+\_\+flags}} (const char $\ast$string, \mbox{\hyperlink{structflags__t}{flags\+\_\+t}} $\ast$flags)
+\begin{DoxyCompactList}\small\item\em Функция парсинга ключа из строки string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{parse_8h_ad2914a2082a98445c711c168635736d5}{put\+\_\+info}} (\mbox{\hyperlink{structflags__t}{flags\+\_\+t}} $\ast$flags)
+\begin{DoxyCompactList}\small\item\em Функция вывода информации в зависимости от пойманного ключа \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{parse_8h_a7102518953a8dc14a99f1f714fe4b0e4}\label{parse_8h_a7102518953a8dc14a99f1f714fe4b0e4}} 
+\index{parse.h@{parse.h}!MAX\_LEN\_CMD@{MAX\_LEN\_CMD}}
+\index{MAX\_LEN\_CMD@{MAX\_LEN\_CMD}!parse.h@{parse.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_LEN\_CMD}{MAX\_LEN\_CMD}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+LEN\+\_\+\+CMD~100}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{parse_8h_a60cdbd54c1a2b3bf449a28b8ddc1e701}\label{parse_8h_a60cdbd54c1a2b3bf449a28b8ddc1e701}} 
+\index{parse.h@{parse.h}!parse\_args@{parse\_args}}
+\index{parse\_args@{parse\_args}!parse.h@{parse.h}}
+\doxysubsubsection{\texorpdfstring{parse\_args()}{parse\_args()}}
+{\footnotesize\ttfamily char$\ast$ parse\+\_\+args (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structflags__t}{flags\+\_\+t}} $\ast$}]{flags }\end{DoxyParamCaption})}
+
+
+
+Функция парсинга аргументов из командной строки 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Количество аргументов \\
+\hline
+{\em argv} & Массив аргументов \\
+\hline
+{\em flags} & Структура для обозначения ключей \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает путь в виде строки, где нужно производить поиск 
+\end{DoxyReturn}
+\mbox{\Hypertarget{parse_8h_acac2d49b00a0ce18fd30367afc287bcc}\label{parse_8h_acac2d49b00a0ce18fd30367afc287bcc}} 
+\index{parse.h@{parse.h}!parse\_flags@{parse\_flags}}
+\index{parse\_flags@{parse\_flags}!parse.h@{parse.h}}
+\doxysubsubsection{\texorpdfstring{parse\_flags()}{parse\_flags()}}
+{\footnotesize\ttfamily void parse\+\_\+flags (\begin{DoxyParamCaption}\item[{const char $\ast$}]{string,  }\item[{\mbox{\hyperlink{structflags__t}{flags\+\_\+t}} $\ast$}]{flags }\end{DoxyParamCaption})}
+
+
+
+Функция парсинга ключа из строки string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & Строка, которая содержит ключ \\
+\hline
+{\em flags} & Структура для обобзначения ключей \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{parse_8h_ad2914a2082a98445c711c168635736d5}\label{parse_8h_ad2914a2082a98445c711c168635736d5}} 
+\index{parse.h@{parse.h}!put\_info@{put\_info}}
+\index{put\_info@{put\_info}!parse.h@{parse.h}}
+\doxysubsubsection{\texorpdfstring{put\_info()}{put\_info()}}
+{\footnotesize\ttfamily void put\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structflags__t}{flags\+\_\+t}} $\ast$}]{flags }\end{DoxyParamCaption})}
+
+
+
+Функция вывода информации в зависимости от пойманного ключа 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flags} & Структура ключей \\
+\hline
+\end{DoxyParams}
