@@ -9,12 +9,12 @@
  * @param filenames Массив путей к файлам
  * @param size Текущий размер массива
  * @param capacity Емкость массива (изменяется)
+ * @param message_digest Хеш-сумма файлов
  */
 typedef struct file_list_t {
-  char base_dir[MAX_LEN_PATH];
   char **filenames;
   int size;
-  int capacity; // Добавить массив хешей (char **)
+  int capacity;
   char **message_digest;
 } file_list_t;
 
@@ -54,7 +54,7 @@ void file_list_destructor(file_list_t *list) {
   free(list->message_digest);
 }
 
-int file_list_append(file_list_t *list, const char *string,
+int file_list_append(file_list_t *list, const char *filepath,
                      const char *message_digest) {
   if (list->size >= list->capacity) {
     int temp_capacity = list->capacity * 2;
@@ -70,23 +70,17 @@ int file_list_append(file_list_t *list, const char *string,
     }
   }
   list->filenames[list->size] =
-      (char *)malloc(sizeof(char) * (strlen(string) + 1));
+      (char *)malloc(sizeof(char) * (strlen(filepath) + 1));
   list->message_digest[list->size] =
       (char *)malloc(sizeof(char) * (strlen(message_digest) + 1));
   if (!list->filenames[list->size] || !list->message_digest[list->size])
     return 0;
 
-  strcpy(list->filenames[list->size], string);
+  strcpy(list->filenames[list->size], filepath);
   strcpy(list->message_digest[list->size], message_digest);
   list->size++;
   return 1;
 }
-
-void file_list_set_base_dir(file_list_t *list, const char *base_path) {
-  strncpy(list->base_dir, base_path, MAX_LEN_PATH);
-}
-
-char *file_list_get_base_dir(file_list_t *list) { return list->base_dir; }
 
 char **file_list_get_filenames(file_list_t *list) { return list->filenames; }
 

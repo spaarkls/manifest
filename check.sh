@@ -32,7 +32,7 @@ echo ""
 echo "Test 2. Указан путь которого нет"
 echo "[-] Запуск программы..."
 ./test_mangen qwerty12345 > tests/bad_path.txt
-if grep -q "Данного файла/директории не существует" tests/bad_path.txt; then
+if grep -q "Данного каталога не существует" tests/bad_path.txt; then
     printf "${GREEN} Тест успешно пройден ${NO_COLOR}\n"
 else 
     printf "${RED} Ошибка ${NO_COLOR}\n"

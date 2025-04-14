@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void test_hash(file_list_t *list);
+void test_hash(file_list_t *list, const char *dirname);
 void test_e_flag(file_list_t *list);
 
 int main(int argc, char *argv[]) {
@@ -21,8 +21,7 @@ int main(int argc, char *argv[]) {
   recursive_find(dirname, flags.except, list, strlen(dirname) + 1);
 
 #ifdef TEST
-  file_list_set_base_dir(list, dirname);
-  test_hash(list);
+  test_hash(list, dirname);
   test_e_flag(list);
 #else
   file_list_print_path(list);
@@ -33,17 +32,14 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 
-void test_hash(file_list_t *list) {
+void test_hash(file_list_t *list, const char *dirname) {
   char **md = file_list_get_message_digest(list);
   char **path = file_list_get_filenames(list);
   int size = file_list_get_size(list);
 
   FILE *file = fopen("tests/path.txt", "w");
-  char base_dir[MAX_LEN_PATH];
-
-  strcpy(base_dir, file_list_get_base_dir(list));
   for (int i = 0; i < size; i++) {
-    fprintf(file, "%s/%s\n", base_dir, path[i]);
+    fprintf(file, "%s/%s\n", dirname, path[i]);
   }
   fclose(file);
 

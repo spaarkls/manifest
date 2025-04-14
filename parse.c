@@ -59,9 +59,11 @@ void parse_flags(const char *string, flags_t *flags) {
 
 void put_info(flags_t *flags) {
   if (flags->h) {
-    printf("Использование: ./mangen [DIRPATH] [OPTIONS],\n");
+    printf("Использование: ./mangen [DIRPATH] [OPTIONS]\n");
     printf("где DIRPATH = путь к файлу или к директории\n");
-    printf("Допустимые флаги -e <except>\n");
+    printf("OPTIONS = ключи"
+    printf("Допустимые флаги:\n./mangen -e <except_file_name> исключает файл из обработки\n");
+    printf(" ./mangen -v вывод информации о версии и авторе\n");
   }
   if (flags->v) {
     printf("mangen version 1.0\n");

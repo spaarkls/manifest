@@ -14,7 +14,6 @@ void get_hash(const char *filename, char *filehash) {
   }
   char buffer[4096];
   size_t count_bytes = 0;
-
   EVP_MD_CTX *context = EVP_MD_CTX_new();
   const EVP_MD *md = EVP_sha256();
   EVP_DigestInit_ex(context, md, NULL);
@@ -40,17 +39,16 @@ void recursive_find(char *dirname, char *except, file_list_t *list,
                     int offset) {
   DIR *dir = opendir(dirname);
   if (!dir) {
-    printf("Данного файла/директории не существует: %s\n", dirname);
+    printf("Данного каталога не существует: %s\n", dirname);
     return;
   }
 
   struct dirent *file;
   while ((file = readdir(dir)) != NULL) {
     if (strcmp(file->d_name, ".") == 0 || strcmp(file->d_name, "..") == 0 ||
-        (strlen(except) && strstr(file->d_name, except))) {
+        (strlen(except) && !strcmp(file->d_name, except))) {
       continue;
     }
-
     char path[MAX_LEN_PATH];
     memset(path, 0, MAX_LEN_PATH);
     strcat(path, dirname);
@@ -61,10 +59,10 @@ void recursive_find(char *dirname, char *except, file_list_t *list,
       continue;
     }
     if (S_ISREG(file_stat.st_mode)) {
-      char hash[MAX_LEN_PATH];
+      char hash[EVP_MAX_MD_SIZE];
       get_hash(path, hash);
       if (!file_list_append(list, path + offset, hash)) {
-        printf("ERROR append\n");
+        printf("Error file_list_append: %s\n", path + offset);
         closedir(dir);
         file_list_destructor(list);
         return;
@@ -74,7 +72,7 @@ void recursive_find(char *dirname, char *except, file_list_t *list,
   rewinddir(dir);
   while ((file = readdir(dir)) != NULL) {
     if (strcmp(file->d_name, ".") == 0 || strcmp(file->d_name, "..") == 0 ||
-        (strlen(except) && strstr(file->d_name, except))) {
+        (strlen(except) && !strcmp(file->d_name, except))) {
       continue;
     }
     char path[MAX_LEN_PATH];

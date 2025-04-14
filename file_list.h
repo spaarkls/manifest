@@ -9,7 +9,7 @@ typedef struct file_list_t file_list_t;
 
 
 // ------------------------------------------- //
-// Поведенческие функции структуры file_list_t //
+// Поведенчиские функции структуры file_list_t //
 // ------------------------------------------- //
 /**
  * @brief Функция для получения текущего размера массива из структуры
@@ -48,31 +48,11 @@ void file_list_destructor(file_list_t *list);
  * @brief Функция добавления нового пути к файлу в структуру
  * 
  * @param list Структура где хранится информация о массиве с файлами
- * @param string Путь который нужно добавить в структуру
+ * @param filepath Путь который нужно добавить в структуру
  * @param message_digest Хеш сумма файла строки string
  * @return Возвращает 1 если добавление прошло успешно, 0 если нет
  */
-int file_list_append(file_list_t *list, const char *string, const char *message_digest);
-
-
-/**
- * @brief Функция устанавливет базоввую директорию
- * 
- * @param list Структура где хранится информация о массиве с файлами
- * @param base_path Базовая директория относительно которой начинается поиск
- */
-void file_list_set_base_dir(file_list_t *list, const char *base_path);
-
-
-
-
-/**
- * @brief Функция для получения базовой директории относительно которой был поиск
- * 
- * @param list Структура где хранится информация о массиве с файлами
- * @return Возвращает строку, которая содержит базовую директорию (char *)
- */
-char *file_list_get_base_dir(file_list_t *list);
+int file_list_append(file_list_t *list, const char *filepath, const char *message_digest);
 
 
 /**

@@ -105,15 +105,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ad3576ad96a8d591032baa44e650f3c68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__list_8c.html#ad3576ad96a8d591032baa44e650f3c68">file_list_destructor</a> (<a class="el" href="structfile__list__t.html">file_list_t</a> *list)</td></tr>
 <tr class="memdesc:ad3576ad96a8d591032baa44e650f3c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция память, занятую структурой <a class="el" href="structfile__list__t.html" title="Структура для хранения путей к файлам">file_list_t</a> и её содержимым  <a href="file__list_8c.html#ad3576ad96a8d591032baa44e650f3c68">More...</a><br /></td></tr>
 <tr class="separator:ad3576ad96a8d591032baa44e650f3c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01eeabd583fd040388edb056c2d5177b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__list_8c.html#a01eeabd583fd040388edb056c2d5177b">file_list_append</a> (<a class="el" href="structfile__list__t.html">file_list_t</a> *list, const char *string, const char *message_digest)</td></tr>
-<tr class="memdesc:a01eeabd583fd040388edb056c2d5177b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция добавления нового пути к файлу в структуру  <a href="file__list_8c.html#a01eeabd583fd040388edb056c2d5177b">More...</a><br /></td></tr>
-<tr class="separator:a01eeabd583fd040388edb056c2d5177b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a128d96e590086433e2a1666e86a93aae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__list_8c.html#a128d96e590086433e2a1666e86a93aae">file_list_set_base_dir</a> (<a class="el" href="structfile__list__t.html">file_list_t</a> *list, const char *base_path)</td></tr>
-<tr class="memdesc:a128d96e590086433e2a1666e86a93aae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция устанавливет базоввую директорию  <a href="file__list_8c.html#a128d96e590086433e2a1666e86a93aae">More...</a><br /></td></tr>
-<tr class="separator:a128d96e590086433e2a1666e86a93aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab71fdc103b3b2400f044cbb32faa0750"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__list_8c.html#ab71fdc103b3b2400f044cbb32faa0750">file_list_get_base_dir</a> (<a class="el" href="structfile__list__t.html">file_list_t</a> *list)</td></tr>
-<tr class="memdesc:ab71fdc103b3b2400f044cbb32faa0750"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для получения базовой директории относительно которой был поиск  <a href="file__list_8c.html#ab71fdc103b3b2400f044cbb32faa0750">More...</a><br /></td></tr>
-<tr class="separator:ab71fdc103b3b2400f044cbb32faa0750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23822a953dc786b6dde91ff692c28141"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__list_8c.html#a23822a953dc786b6dde91ff692c28141">file_list_append</a> (<a class="el" href="structfile__list__t.html">file_list_t</a> *list, const char *filepath, const char *message_digest)</td></tr>
+<tr class="memdesc:a23822a953dc786b6dde91ff692c28141"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция добавления нового пути к файлу в структуру  <a href="file__list_8c.html#a23822a953dc786b6dde91ff692c28141">More...</a><br /></td></tr>
+<tr class="separator:a23822a953dc786b6dde91ff692c28141"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a655cbb5e6bdd2271e51e224792af3adf"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__list_8c.html#a655cbb5e6bdd2271e51e224792af3adf">file_list_get_filenames</a> (<a class="el" href="structfile__list__t.html">file_list_t</a> *list)</td></tr>
 <tr class="memdesc:a655cbb5e6bdd2271e51e224792af3adf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для получения массива строк с путями к файлам  <a href="file__list_8c.html#a655cbb5e6bdd2271e51e224792af3adf">More...</a><br /></td></tr>
 <tr class="separator:a655cbb5e6bdd2271e51e224792af3adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,6 +137,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">filenames</td><td>Массив путей к файлам </td></tr>
     <tr><td class="paramname">size</td><td>Текущий размер массива </td></tr>
     <tr><td class="paramname">capacity</td><td>Емкость массива (изменяется) </td></tr>
+    <tr><td class="paramname">message_digest</td><td>Хеш-сумма файлов </td></tr>
   </table>
   </dd>
 </dl>
@@ -150,8 +145,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a01eeabd583fd040388edb056c2d5177b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01eeabd583fd040388edb056c2d5177b">&#9670;&nbsp;</a></span>file_list_append()</h2>
+<a id="a23822a953dc786b6dde91ff692c28141"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23822a953dc786b6dde91ff692c28141">&#9670;&nbsp;</a></span>file_list_append()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -166,7 +161,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>string</em>, </td>
+          <td class="paramname"><em>filepath</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -186,7 +181,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">list</td><td>Структура где хранится информация о массиве с файлами </td></tr>
-    <tr><td class="paramname">string</td><td>Путь который нужно добавить в структуру </td></tr>
+    <tr><td class="paramname">filepath</td><td>Путь который нужно добавить в структуру </td></tr>
     <tr><td class="paramname">message_digest</td><td>Хеш сумма файла строки string </td></tr>
   </table>
   </dd>
@@ -218,33 +213,6 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="ab71fdc103b3b2400f044cbb32faa0750"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab71fdc103b3b2400f044cbb32faa0750">&#9670;&nbsp;</a></span>file_list_get_base_dir()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char* file_list_get_base_dir </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structfile__list__t.html">file_list_t</a> *&#160;</td>
-          <td class="paramname"><em>list</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Функция для получения базовой директории относительно которой был поиск </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">list</td><td>Структура где хранится информация о массиве с файлами </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Возвращает строку, которая содержит базовую директорию (char *) </dd></dl>
 
 </div>
 </div>
@@ -398,43 +366,6 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">list</td><td>Структура где хранится информация о массиве с файлами </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a128d96e590086433e2a1666e86a93aae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a128d96e590086433e2a1666e86a93aae">&#9670;&nbsp;</a></span>file_list_set_base_dir()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void file_list_set_base_dir </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structfile__list__t.html">file_list_t</a> *&#160;</td>
-          <td class="paramname"><em>list</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>base_path</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Функция устанавливет базоввую директорию </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">list</td><td>Структура где хранится информация о массиве с файлами </td></tr>
-    <tr><td class="paramname">base_path</td><td>Базовая директория относительно которой начинается поиск </td></tr>
   </table>
   </dd>
 </dl>
